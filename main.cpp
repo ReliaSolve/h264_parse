@@ -245,11 +245,13 @@ void h264_parse_sequence_parameter_set (h264_decode_t *dec, CBitstream *bs)
   uint32_t temp;
   dec->profile = bs->GetBits(8);
   printf("   profile: %u\n", dec->profile);
-  printf("   constaint_set0_flag: %d\n", bs->GetBits(1));
-  printf("   constaint_set1_flag: %d\n", bs->GetBits(1));
-  printf("   constaint_set2_flag: %d\n", bs->GetBits(1));
-  printf("   constaint_set3_flag: %d\n", bs->GetBits(1));
-  h264_check_0s(bs, 4);
+  printf("   constraint_set0_flag: %d\n", bs->GetBits(1));
+  printf("   constraint_set1_flag: %d\n", bs->GetBits(1));
+  printf("   constraint_set2_flag: %d\n", bs->GetBits(1));
+  printf("   constraint_set3_flag: %d\n", bs->GetBits(1));
+  printf("   constraint_set4_flag: %d\n", bs->GetBits(1));
+  printf("   constraint_set5_flag: %d\n", bs->GetBits(1));
+  h264_check_0s(bs, 2);
   printf("   level_idc: %u\n", bs->GetBits(8));
   printf("   seq parameter set id: %u\n", h264_ue(bs));
   if (dec->profile == 100 || dec->profile == 110 ||
