@@ -967,7 +967,7 @@ int main (int argc, char **argv)
   m_file = fopen(argv[optind], FOPEN_READ_BINARY);
 
   if (m_file == NULL) {
-    fprintf(stderr, "file %s not found\n", *argv);
+    fprintf(stderr, "file %s not found\n", argv[optind]);
     exit(-1);
   }
 
