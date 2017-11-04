@@ -22,7 +22,9 @@ configure_file("${PROJECT_SOURCE_DIR}/mpeg4ip_config.h.cmake_in"
 include_directories(${PROJECT_BINARY_DIR})
 
 #-----------------------------------------------------------------------------
-# Build the library itself and declare what bits need to be installed
+# Build the library itself
+# @todo Pull out the parsing code from the main.cpp and put it into the library
+# so that other applications could make use of it.
 set(my_SOURCES
     getopt.c
 )
